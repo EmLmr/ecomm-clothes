@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Search from '@mui/icons-material/Search';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Badge from '@mui/material/Badge';
 
 const Container = styled.div`
     height: 3rem;
@@ -49,8 +52,17 @@ const Logo = styled.h1`
     font-size: 2rem;
 `;
 
+// Right side of nav.
 const Right = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     flex: 1;
+`;
+
+const MenuItem = styled.div`
+    margin-left: 1.5rem;
+    cursor: pointer;
 `;
 
 const Navbar = () => {
@@ -61,13 +73,21 @@ const Navbar = () => {
                     <Language>EN</Language>
                     <SearchContainer>
                         <Input placeholder="Search..." />
-                        <Search />
+                        <Search color="action" fontSize="small" />
                     </SearchContainer>
                 </Left>
                 <Center>
                     <Logo>Clothes.</Logo>
                 </Center>
-                <Right>right</Right>
+                <Right>
+                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>LOG IN</MenuItem>
+                    <MenuItem>
+                        <Badge badgeContent={4} color="primary">
+                            <ShoppingCartOutlinedIcon />
+                        </Badge>
+                    </MenuItem>
+                </Right>
             </Wrapper>
         </Container>
     );
