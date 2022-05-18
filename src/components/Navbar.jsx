@@ -38,8 +38,15 @@ const Input = styled.input`
     font-family: 'Syne', sans-serif;
 `;
 
+// Center of nav.
 const Center = styled.div`
     flex: 1;
+    text-align: center;
+`;
+
+const Logo = styled.h1`
+    font-family: 'Yeseva One', cursive;
+    font-size: 2rem;
 `;
 
 const Right = styled.div`
@@ -57,7 +64,9 @@ const Navbar = () => {
                         <Search />
                     </SearchContainer>
                 </Left>
-                <Center>center</Center>
+                <Center>
+                    <Logo>Clothes.</Logo>
+                </Center>
                 <Right>right</Right>
             </Wrapper>
         </Container>
