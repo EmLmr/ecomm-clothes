@@ -2,7 +2,9 @@
     margin: 0;
 }
 
-h1 {
+h1,
+h2,
+button {
     font-family: 'Syne', sans-serif;
 }
 
