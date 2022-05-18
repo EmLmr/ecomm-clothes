@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Search from '@mui/icons-material/Search';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Badge from '@mui/material/Badge';
 
 const Container = styled.div`
     height: 3rem;
@@ -38,12 +41,28 @@ const Input = styled.input`
     font-family: 'Syne', sans-serif;
 `;
 
+// Center of nav.
 const Center = styled.div`
+    flex: 1;
+    text-align: center;
+`;
+
+const Logo = styled.h1`
+    font-family: 'Yeseva One', cursive;
+    font-size: 2rem;
+`;
+
+// Right side of nav.
+const Right = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     flex: 1;
 `;
 
-const Right = styled.div`
-    flex: 1;
+const MenuItem = styled.div`
+    margin-left: 1.5rem;
+    cursor: pointer;
 `;
 
 const Navbar = () => {
@@ -54,11 +73,21 @@ const Navbar = () => {
                     <Language>EN</Language>
                     <SearchContainer>
                         <Input placeholder="Search..." />
-                        <Search />
+                        <Search color="action" fontSize="small" />
                     </SearchContainer>
                 </Left>
-                <Center>center</Center>
-                <Right>right</Right>
+                <Center>
+                    <Logo>Clothes.</Logo>
+                </Center>
+                <Right>
+                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>LOG IN</MenuItem>
+                    <MenuItem>
+                        <Badge badgeContent={4} color="primary">
+                            <ShoppingCartOutlinedIcon />
+                        </Badge>
+                    </MenuItem>
+                </Right>
             </Wrapper>
         </Container>
     );
