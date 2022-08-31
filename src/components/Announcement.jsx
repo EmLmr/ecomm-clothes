@@ -10,7 +10,6 @@ const Container = styled.div`
 
     color: white;
     height: 2.5rem;
-    margin: 1.5rem 0;
 `;
 
 const Wrapper = styled.div`

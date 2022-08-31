@@ -6,7 +6,6 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Badge from '@mui/material/Badge';
 
 const Container = styled.div`
-    height: 3rem;
     font-family: 'Syne', sans-serif;
 `;
 
